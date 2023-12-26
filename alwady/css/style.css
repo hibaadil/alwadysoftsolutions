@@ -3,6 +3,7 @@
 :root {
     --primary: #82368c;
     --secondary: #525368;
+    --links: #fa7e29;
     --light: #f2e3f3;
     --dark: #243877;
     --light-dark: rgb(130 54 140 / 35%);
@@ -15,7 +16,7 @@
 .btn-primary:hover {
   background-color: #a902bf;
   border-color: #a902bf;
-  color: var(--light);
+  color: var(--links);
 }
 .text-primary {
   color: var(--primary) !important;
@@ -136,7 +137,7 @@ h6,
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--links);
 }
 
 .navbar .dropdown-toggle::after {
@@ -527,7 +528,7 @@ h6,
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--primary);
+    color: var(--links);
     letter-spacing: 1px;
     box-shadow: none;
 }
@@ -542,5 +543,11 @@ h6,
 }
 
 .copyright a:hover {
-    color: var(--primary);
+    color: var(--links);
+}
+.header-link {
+  color: #FFFFFF;
+}
+.header-link:hover {
+  color:var(--links);
 }
