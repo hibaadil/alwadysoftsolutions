@@ -77,3 +77,28 @@
     
 })(jQuery);
 
+$('.nav-item').on('click', function(e){
+  $('.nav-item').removeClass('active')
+  $(this).addClass('active')
+})
+
+var sections = document.querySelectorAll(".section");
+var navbarItems = document.querySelectorAll(".nav-item");
+window.addEventListener("scroll", function() {
+  var currentSection = "";
+
+  sections.forEach(function(section) {
+    var sectionTop = section.offsetTop - 50; // Adjusted value for better visual feedback
+    var sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navbarItems.forEach(function(item) {
+    item.classList.remove("active");
+    if (item.getAttribute("href").slice(1) === currentSection) {
+      item.classList.add("active");
+    }
+  });
+});
